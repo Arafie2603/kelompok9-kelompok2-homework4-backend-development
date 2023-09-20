@@ -2,7 +2,7 @@
 <?php 
 
 $servername = "localhost";
-$database = "homework4";
+$database = "api_bank";
 $username = "root";
 $password = "";
 
