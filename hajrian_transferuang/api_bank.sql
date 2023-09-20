@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Waktu pembuatan: 20 Sep 2023 pada 04.18
--- Versi server: 10.4.28-MariaDB
--- Versi PHP: 8.2.4
+-- Host: localhost:3306
+-- Waktu pembuatan: 19 Sep 2023 pada 07.26
+-- Versi server: 8.0.30
+-- Versi PHP: 8.1.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -28,11 +28,11 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `accounts` (
-  `id` int(11) NOT NULL,
+  `id` int NOT NULL,
   `account_number` varchar(255) NOT NULL,
   `balance` decimal(10,2) NOT NULL,
-  `transactions` text DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  `transactions` text
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data untuk tabel `accounts`
@@ -61,12 +61,12 @@ INSERT INTO `accounts` (`id`, `account_number`, `balance`, `transactions`) VALUE
 --
 
 CREATE TABLE `transactions` (
-  `id` int(11) NOT NULL,
+  `id` int NOT NULL,
   `from_account_number` varchar(255) NOT NULL,
   `to_account_number` varchar(255) NOT NULL,
   `amount` decimal(10,2) NOT NULL,
-  `timestamp` timestamp NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  `timestamp` timestamp NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data untuk tabel `transactions`
@@ -100,13 +100,13 @@ ALTER TABLE `transactions`
 -- AUTO_INCREMENT untuk tabel `accounts`
 --
 ALTER TABLE `accounts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT untuk tabel `transactions`
 --
 ALTER TABLE `transactions`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
