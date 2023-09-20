@@ -1,0 +1,118 @@
+{
+	"info": {
+		"_postman_id": "619ee4d3-bfa7-4a13-92e8-9eb1b4d97d74",
+		"name": "Pengujian Homework 4",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27641653"
+	},
+	"item": [
+		{
+			"name": "http://localhost/homework/kelompok9-kelompok2-homework4-backend-development/jawaban-kelompok2/tampilSaldo.php?id=3",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "account_number",
+							"value": "007",
+							"type": "text"
+						},
+						{
+							"key": "account_number",
+							"value": "009",
+							"type": "text"
+						},
+						{
+							"key": "amount",
+							"value": "100.00",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/homework/kelompok9-kelompok2-homework4-backend-development/jawaban-kelompok2/tampilSaldo.php?id=3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"homework",
+						"kelompok9-kelompok2-homework4-backend-development",
+						"jawaban-kelompok2",
+						"tampilSaldo.php"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "3"
+						}
+					]
+				},
+				"description": "Jawaban untuk soal nomor 1\r\n1. Menampilkan Saldo\r\nEndpoint: /api/balance\r\nMethod: GET\r\nDeskripsi: Mengembalikan saldo akun berdasarkan ID akun yang diberikan."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/homework/kelompok9-kelompok2-homework4-backend-development/jawaban-kelompok2/CekTransaksiTerakhir.php?account_number=004",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "id",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "jumlah",
+							"value": "20000",
+							"type": "text"
+						},
+						{
+							"key": "waktu",
+							"value": "2023-09-18 15:30:00",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/homework/kelompok9-kelompok2-homework4-backend-development/jawaban-kelompok2/CekTransaksiTerakhir.php?account_number=004",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"homework",
+						"kelompok9-kelompok2-homework4-backend-development",
+						"jawaban-kelompok2",
+						"CekTransaksiTerakhir.php"
+					],
+					"query": [
+						{
+							"key": "account_number",
+							"value": "004"
+						}
+					]
+				},
+				"description": "Jawaban untuk soal nomor 3 \r\nCek Transaksi Terakhir\r\n3. Endpoint: /api/transactions\r\nMethod: GET\r\nDeskripsi: Mengembalikan daftar transaksi terakhir untuk akun tertentu."
+			},
+			"response": []
+		}
+	]
+}
